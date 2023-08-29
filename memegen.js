@@ -1,5 +1,6 @@
 const form = document.querySelector("#meme-info");
 const container = document.querySelector("#meme-container");
+const removeButton = document.querySelector("#remove-button");
 
 form.addEventListener("submit", event => {
   // preventing page reload
@@ -31,4 +32,11 @@ document.addEventListener("keyup", event => {
     let selectedMemes = document.querySelectorAll(".selected-meme");
     selectedMemes.forEach(meme => meme.remove());
   }
+})
+
+
+removeButton.addEventListener("click", event => {
+  event.preventDefault();
+  let selectedMemes = document.querySelectorAll(".selected-meme");
+  selectedMemes.forEach(meme => meme.remove());
 })

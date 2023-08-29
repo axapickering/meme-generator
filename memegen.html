@@ -84,10 +84,13 @@
         top: -30px;
       }
       .meme-bottom-text {
-        bottom: 5px;
+        bottom: -5px;
       }
       .selected-meme {
         outline: red 5px solid;
+      }
+      #remove-button {
+        margin-left: 10px;
       }
     </style>
   </head>
@@ -114,6 +117,12 @@
       <input class = "meme-input-form" type="submit" id="meme-create-button" value="Create">
     </form>
 
+  </div>
+
+  <div id="remove-button-div">
+    <form id="remove-button-form">
+      <button id="remove-button">Remove selected memes</button>
+    </form>
   </div>
 
   <div id="meme-container"></div>
