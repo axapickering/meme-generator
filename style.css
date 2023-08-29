@@ -1,0 +1,28 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  width: 99%;
+  margin: 0 auto;
+  letter-spacing: .5px;
+  color: white;
+
+}
+html {
+  background-color : #262629;
+}
+header {
+  background-color : #303133;
+  height: 40px;
+  padding:10px;
+}
+input {
+  display: inline-block;
+}
+a {
+  border-color: black;
+  color: hotpink;
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+

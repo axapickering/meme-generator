@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+      #welcome-text {
+        display: table;
+        margin: auto;
+      }
+      @font-face {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        src: url(impact.ttf);
+      }
+      #input_entry {
+        display: table;
+        margin: auto;
+        width: 250px;
+        height: 20%;
+        background: #303133;
+        margin: auto;
+      }
+      #meme-create-button {
+        background: #262629;
+        color: hotpink;
+      }
+      .meme-input-form {
+        display: table;
+        margin: auto;
+        margin-top: 5px;
+      }
+      label {
+        display: block;
+      }
+      input {
+        display: inline;
+      }
+      input[type="submit"] {
+        display: table;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #meme-container {
+        display: flex;
+        background-color: #303133;
+        position: relative;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 90%;
+        height: 50%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 10px;
+      }
+      .meme,.meme-image {
+        height: 300px;
+        width: 300px;
+        position: relative;
+      }
+      .meme-top-text,.meme-bottom-text {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 250px;
+        max-height: 120px;
+        overflow-wrap: break-word;
+        text-align: center;
+      }
+      .meme:hover {
+        opacity: .5;
+      }
+      .meme-top-text {
+        top: -30px;
+      }
+      .meme-bottom-text {
+        bottom: 5px;
+      }
+      .selected-meme {
+        outline: red 5px solid;
+      }
+    </style>
+  </head>
+  <body>
+      <header>
+        <nav>
+          <a href="projects.html">Back to Projects</a>
+        </nav>
+      </header>
+
+  <div id="welcome-text"><h1>Welcome to the meme generator!</h1></div>
+
+  <div id= "input_entry">
+    <form id="meme-info">
+      <label class= "meme-input-form" for="meme-image-URL">Image URL: </label>
+          <input type= "text" class = "meme-input-form" id="meme-image-URL" value ="https://www.allrecipes.com/thmb/pTGS0SZsSQK85sV_RQE_K6ZfoN4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26460-quick-and-easy-chicken-noodle-soup-allrecipes-1x1-1-b88125437574471db3e114c40bc6928e.jpg" >
+
+      <label class= "meme-input-form" for="top-text">Top text</label>
+          <input type="text" name="top-text" class = "meme-input-form" id="top-text" value="toptoptop">
+
+      <label class= "meme-input-form" for="bottom-text">Bottom text</label>
+          <input type="text" name="bottom-text" class = "meme-input-form" id="bottom-text" value="bottombottombottom">
+
+      <input class = "meme-input-form" type="submit" id="meme-create-button" value="Create">
+    </form>
+
+  </div>
+
+  <div id="meme-container"></div>
+
+  <script src="memegen.js"></script>
+
+  </body>
+</html>
